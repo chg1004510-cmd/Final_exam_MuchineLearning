@@ -1,0 +1,10 @@
+artifact_location: file:///F:/Users/samsung/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/2%ED%95%99%EB%85%84_1%ED%95%99%EA%B8%B0/%EA%B8%B0%EA%B3%84%ED%95%99%EC%8A%B5%284%29/finalexam_muchineLearning/mlruns/476399384574320464/models/m-28537dd45a0341c48ccac76a83cb7250/artifacts
+creation_timestamp: 1781192507116
+experiment_id: '476399384574320464'
+last_updated_timestamp: 1781192528238
+model_id: m-28537dd45a0341c48ccac76a83cb7250
+model_type: null
+name: model
+source_run_id: 06e2ccffcae4414ea2f7ef567cad7c7b
+status: 2
+status_message: null

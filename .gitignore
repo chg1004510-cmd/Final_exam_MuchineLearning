@@ -9,7 +9,7 @@ venv/
 env/
 
 # 모델·데이터 (대용량 → git-lfs 또는 스크린샷 대체)
-models/
+models/*
 !models/best_model.pkl
 data/*.csv
 !data/sample_batch.csv

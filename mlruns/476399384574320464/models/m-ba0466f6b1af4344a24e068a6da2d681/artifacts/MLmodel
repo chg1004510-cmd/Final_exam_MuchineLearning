@@ -1,0 +1,23 @@
+artifact_path: file:///F:/Users/samsung/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/2%ED%95%99%EB%85%84_1%ED%95%99%EA%B8%B0/%EA%B8%B0%EA%B3%84%ED%95%99%EC%8A%B5%284%29/finalexam_muchineLearning/mlruns/476399384574320464/models/m-ba0466f6b1af4344a24e068a6da2d681/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.7
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.1
+    skops_trusted_types: null
+mlflow_version: 3.13.0
+model_id: m-ba0466f6b1af4344a24e068a6da2d681
+model_size_bytes: 1565369
+model_uuid: m-ba0466f6b1af4344a24e068a6da2d681
+prompts: null
+run_id: 24ee8100d50e42bd89c65357b0dd70dd
+utc_time_created: '2026-06-11 15:39:27.681044'
