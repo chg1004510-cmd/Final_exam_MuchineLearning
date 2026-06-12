@@ -1,0 +1,10 @@
+Model: KNN
+
+              precision    recall  f1-score   support
+
+   Normal(0)       0.91      0.88      0.89        33
+  Disease(1)       0.86      0.89      0.88        28
+
+    accuracy                           0.89        61
+   macro avg       0.88      0.89      0.88        61
+weighted avg       0.89      0.89      0.89        61

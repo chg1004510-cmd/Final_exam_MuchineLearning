@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.log
+.env
+venv/
+.venv/
+env/
+
+# 모델·데이터 (대용량 → git-lfs 또는 스크린샷 대체)
+models/
+!models/best_model.pkl
+data/*.csv
+!data/sample_batch.csv
+!data/cleveland.csv
+
+# MLflow (용량이 크면 스크린샷 대체)
+# mlruns/   ← 제출 시에는 주석 해제하지 말 것 (채점자가 확인해야 함)
+
+# 로그
+logs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 한글 이름 원본 보고서 (report.pdf 로 복사 완료)
+기계학습_기말과제_보고서_최한결.pdf

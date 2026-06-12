@@ -1,0 +1,10 @@
+Model: SVC
+
+              precision    recall  f1-score   support
+
+   Normal(0)       0.97      0.85      0.90        33
+  Disease(1)       0.84      0.96      0.90        28
+
+    accuracy                           0.90        61
+   macro avg       0.90      0.91      0.90        61
+weighted avg       0.91      0.90      0.90        61

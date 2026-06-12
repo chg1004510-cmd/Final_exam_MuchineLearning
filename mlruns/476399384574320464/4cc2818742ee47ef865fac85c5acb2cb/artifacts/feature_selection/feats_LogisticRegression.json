@@ -1,0 +1,19 @@
+{
+  "model": "LogisticRegression",
+  "n_selected": 13,
+  "features": [
+    "num__age",
+    "num__trestbps",
+    "num__chol",
+    "num__thalach",
+    "num__oldpeak",
+    "num__ca",
+    "cat__cp_4.0",
+    "cat__exang_0.0",
+    "cat__exang_1.0",
+    "cat__slope_1.0",
+    "cat__slope_2.0",
+    "cat__thal_3.0",
+    "cat__thal_7.0"
+  ]
+}

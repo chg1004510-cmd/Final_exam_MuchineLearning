@@ -1,0 +1,55 @@
+name: CardioCare CI
+
+# 모든 브랜치의 push 및 main 브랜치 PR 에서 실행
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    name: Unit Tests (Python 3.10)
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. 저장소 체크아웃 ────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Python 3.10 설정 ──────────────────────────────────────────────
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      # ── 3. pip 캐시 (재빌드 속도 향상) ───────────────────────────────────
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      # ── 4. 의존성 설치 ────────────────────────────────────────────────────
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # ── 5. 소스 구문 검사 ─────────────────────────────────────────────────
+      - name: Check source syntax
+        run: |
+          python -m py_compile src/preprocessing.py
+          python -m py_compile src/train.py
+          python -m py_compile src/inference.py
+          python -m py_compile src/monitor.py
+
+      # ── 6. 단위 테스트 실행 ───────────────────────────────────────────────
+      # 테스트는 합성 데이터를 사용하므로 인터넷 연결·사전 학습 모델 불필요
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -p "test_*.py" -v
+
+      # ── 7. 테스트 결과 요약 ───────────────────────────────────────────────
+      - name: Test summary
+        if: always()
+        run: echo "CI pipeline completed — check above for test results."
