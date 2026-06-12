@@ -17,6 +17,9 @@ data/*.csv
 
 # MLflow (용량이 크면 스크린샷 대체)
 # mlruns/   ← 제출 시에는 주석 해제하지 말 것 (채점자가 확인해야 함)
+# MLflow UI 자동 생성 demo 콘텐츠 제외
+mlruns/models/
+mlruns/405923353676288577/
 
 # 로그
 logs/
