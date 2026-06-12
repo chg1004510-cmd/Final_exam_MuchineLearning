@@ -60,7 +60,12 @@ python src/train.py
 
 MLflow UI 확인:
 ```bash
-mlflow ui --backend-store-uri mlruns/
+# Linux/macOS
+MLFLOW_ALLOW_FILE_STORE=true mlflow ui --backend-store-uri mlruns/
+
+# Windows PowerShell
+$env:MLFLOW_ALLOW_FILE_STORE="true"; mlflow ui --backend-store-uri mlruns/
+
 # 브라우저: http://localhost:5000
 ```
 
