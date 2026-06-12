@@ -39,8 +39,8 @@
 ### 0. 의존성 설치
 
 ```bash
-git clone <repo-url>
-cd finalexam_muchineLearning
+git clone https://github.com/chg1004510-cmd/Final_exam_MuchineLearning.git
+cd Final_exam_MuchineLearning
 pip install -r requirements.txt
 ```
 
@@ -69,17 +69,10 @@ $env:MLFLOW_ALLOW_FILE_STORE="true"; mlflow ui --backend-store-uri mlruns/
 # 브라우저: http://localhost:5000
 ```
 
-### 3. 단위 테스트
+### 3. Docker 빌드 & 실행
 
 ```bash
-python -m unittest discover -s tests -v
-# 4개 테스트 모두 OK
-```
-
-### 4. Docker 빌드 & 실행
-
-```bash
-# 빌드 (train.py 실행 후 models/ 가 있어야 함)
+# 빌드 (models/best_model.pkl 은 레포에 포함 → clone 직후 빌드 가능)
 docker build -t cardiocare:1.0 .
 
 # 실행 (sample_batch.csv 로 추론)
@@ -91,6 +84,13 @@ docker run --rm \
   cardiocare:1.0 \
   --input data/sample_batch.csv \
   --output /tmp/predictions.csv
+```
+
+### 4. 단위 테스트
+
+```bash
+python -m unittest discover -s tests -v
+# 4개 테스트 모두 OK
 ```
 
 ### 5. 드리프트 모니터링
