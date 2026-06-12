@@ -192,5 +192,3 @@ GitHub Actions (`push` 트리거) → `python -m unittest discover -s tests -v`
 
 이 프로젝트의 보일러플레이트 코드 작성과 디버깅 과정에서  
 **Claude (Anthropic, claude-sonnet-4-6)** 를 활용하였습니다.  
-제출된 모든 코드의 내용과 정확성에 대한 책임은 제출자 본인에게 있으며,  
-구두 확인에 응할 수 있습니다.
