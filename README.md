@@ -188,7 +188,10 @@ GitHub Actions (`push` 트리거) → `python -m unittest discover -s tests -v`
 
 ---
 
-## AI 도구 사용 공개 (§8 요구사항)
+## AI 도구 사용 공개 (§8)
 
-이 프로젝트의 보일러플레이트 코드 작성과 디버깅 과정에서  
-**Claude (Anthropic, claude-sonnet-4-6)** 를 활용하였습니다.  
+이 프로젝트에서 Claude(Anthropic)를 코드 초안 작성, 디버깅, 보고서 문장
+정리에 활용했습니다. 전처리 파이프라인 구조, MLflow 연동, Docker 설정 등
+초기 구현에서 AI 도움을 많이 받았습니다. 다만 코드 전체를 직접 읽고
+실행하여 각 구성 요소의 동작을 이해했으며, 분석·해석·모델 선택 판단·수치
+검증은 직접 수행했습니다.
